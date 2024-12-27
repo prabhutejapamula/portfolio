@@ -1,12 +1,8 @@
 .background {
     background-image: url("../01.gif");
     height: 100vh;
-    // background-position: center;
-    // background-repeat: no-repeat;
     background-color: black;
-    // background-size: 30%;
     background-size: 11rem;
-
 }
 
 .resume-link {
@@ -41,4 +37,8 @@
         display: inline-block;
         transition: color 0.5s ease-in-out;
     }
+}
+
+.name-text {
+    color: white;
 }
