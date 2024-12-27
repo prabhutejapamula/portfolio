@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -37,5 +38,5 @@ export class NavigationMenuComponent implements OnInit {
   openResume(): void {
     window.open('assets/PrabhuTejaPamula.pdf', '_blank');
   }
-
+  
 }

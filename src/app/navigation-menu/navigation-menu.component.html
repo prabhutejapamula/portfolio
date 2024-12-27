@@ -1,20 +1,21 @@
-<div class="background">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col text-center">
-                <a class="navbar-brand me-2" href="https://prabhutejapamula.github.io/portfolio/"></a>
-                <div>
-                    <h2>
-                        <span class="name-text">I am Prabhu Teja Pamula</span>
-                    </h2>
-                    <h2 id="glowing-text">
-                        Welcome to my digital space!
-                    </h2>
-                </div>
-            </div>
-        </div>
+<div class="background d-flex flex-column justify-content-center align-items-center">
+    <div class="text-center">
+        <h2 id="glowing-text">
+            Welcome to my digital space!
+        </h2>
+        <h2>
+            <span class="name-text">I am Prabhu Teja Pamula</span>
+        </h2>
     </div>
-    <div class="resume-link d-flex gap-3 justify-content-center">
+
+    <div class="resume-link mt-4">
         <button class="btn btn-dark resume-btn" (click)="openResume()">Resume</button>
+    </div>
+
+    <div class="animated-threads">
+        <div class="thread top-left"></div>
+        <div class="thread top-right"></div>
+        <div class="thread bottom-left"></div>
+        <div class="thread bottom-right"></div>
     </div>
 </div>
