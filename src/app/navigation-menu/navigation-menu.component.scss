@@ -60,29 +60,29 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     animation: ripplingEffect 3s ease-in-out infinite;
-}
 
-.resume-btn:hover {
-    background-color: #23272b;
-}
+    &:hover {
+        background-color: #23272b;
+    }
 
-.resume-btn.icon-btn {
-    width: 5.2vw;
-    height: 4vw;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    box-shadow: none;
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
+    &.icon-btn {
+        width: 5.2vw;
+        height: 4vw;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: none;
+        box-shadow: none;
+        transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 
-.resume-btn.icon-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 }
 
 .small-btn {
@@ -91,11 +91,11 @@
     border-radius: 0.25rem;
     background-color: transparent;
     border: 1px solid #ccc;
-}
 
-.small-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: #aaa;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: #aaa;
+    }
 }
 
 .powered-by {
@@ -105,14 +105,28 @@
     color: #777;
 }
 
+.modal {
+    user-select: none;
+}
+
+.modal-body a {
+    display: block;
+    max-width: 576px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* Animation */
 @keyframes ripplingEffect {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
@@ -126,31 +140,22 @@
     }
 
     .resume-link {
-    padding: 2vh 4vw;
+        padding: 2vh 4vw;
     }
-  }
-  
-  /* Mobile screen sizes */
-  @media (max-width: 576px) {
+}
+
+/* Mobile screen sizes */
+@media (max-width: 576px) {
     .resume-btn.icon-btn {
         width: 11vw;
         height: 10vw;
     }
 
     .resume-link {
-    padding: 2vh 4vw;
+        padding: 2vh 4vw;
     }
+}
 
-    .modal-body a {
-        display: block;
-        max-width: 480px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    }
-  
 /* Small Mobile Devices */
 @media (max-width: 480px) {
     .resume-btn.icon-btn {
@@ -159,6 +164,6 @@
     }
 
     .resume-link {
-    padding: 2vh 4vw;
+        padding: 2vh 4vw;
     }
 }
