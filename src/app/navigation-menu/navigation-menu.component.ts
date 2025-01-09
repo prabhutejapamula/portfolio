@@ -38,5 +38,29 @@ export class NavigationMenuComponent implements OnInit {
   openResume(): void {
     window.open('assets/PrabhuTejaPamula.pdf', '_blank');
   }
-  
+
+  openLinkedIn(): void {
+    window.open("https://www.linkedin.com/in/prabhu-teja-pamula/", '_blank');
+  }
+
+  openLeetcode(): void {
+    window.open("https://leetcode.com/u/prabhutejapamula/", '_blank');
+  }
+
+  openInstagram(): void {
+    window.open("https://www.instagram.com/prabhu.tejaa/", '_blank');
+  }
+
+  openPhotography(): void {
+    window.open("https://www.instagram.com/eye.37._/", '_blank');
+  }
+
+  openArtExploration(): void {
+    window.open("https://www.instagram.com/xplore______/", '_blank');
+  }
+
+  openYoutube(): void {
+    window.open("https://www.youtube.com/@anotherhuman137/", '_blank');
+  }
+
 }

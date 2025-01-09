@@ -8,9 +8,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; 
+    text-align: center;
 }
 
+#glowing-text {
+    font-size: 1.7vw;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+}
+
+.name-text {
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.resume-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
 
 .resume-btn {
     position: relative;
@@ -42,20 +62,6 @@
     }
 }
 
-
-#glowing-text {
-    font-size: 1.7vw;
-    font-weight: bold;
-    color: #ffffff;
-    transition: color 0.5s ease-in-out;
-}
-
-.name-text {
-    color: white;
-    font-size: 3vw;
-    font-weight: bold;
-}
-
 @media (max-width: 768px) {
     #glowing-text {
         font-size: 3.2vw;
@@ -65,7 +71,13 @@
         font-size: 5vw;
     }
 
+    .resume-link {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .resume-btn {
+        width: 100%;
         font-size: 1rem;
         padding: 8px 16px;
     }
@@ -81,8 +93,9 @@
     }
 
     .resume-btn {
+        width: 100%;
         font-size: 0.9rem;
         padding: 6px 12px;
     }
 }
-
+    
