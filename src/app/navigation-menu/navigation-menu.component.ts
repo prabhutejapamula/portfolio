@@ -78,5 +78,9 @@ export class NavigationMenuComponent implements OnInit {
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   }
+
+  openCredits(){
+    
+  }
   
 }
