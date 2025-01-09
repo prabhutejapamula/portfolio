@@ -43,9 +43,10 @@
   <!-- Modal -->
   <div class="modal fade" *ngIf="isModalOpen" [ngClass]="{'show': isModalOpen}" tabindex="-1" role="dialog" aria-labelledby="creditsModalCenterTitle" aria-hidden="true" [style.display]="isModalOpen ? 'block' : 'none'">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+      <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title" id="creditsModalLongTitle">Credits</h5>
+          <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="closeCredits()"></button>
         </div>
         <div class="modal-body">
           <div>
@@ -82,8 +83,8 @@
             Powered by <strong>Angular</strong> and <strong>Bootstrap</strong>
         </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeCredits()">Close</button>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-light" (click)="closeCredits()">Close</button>
         </div>
       </div>
     </div>
