@@ -119,14 +119,22 @@
 }
 
 .small-btn {
-    padding: 2px 4px; /* Reduce padding */
-    font-size: 0.7rem; /* Reduce font size */
-    border-radius: 0.25rem; /* Optional: smaller rounded corners */
-    background-color: transparent; /* Make background transparent */
-    border: 1px solid #ccc; /* Optional: add a border if needed */
+    padding: 2px 4px;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    border: 1px solid #ccc;
 }
 
 .small-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: add a slight hover effect */
-    border-color: #aaa; /* Optional: change border color on hover */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #aaa;
+}
+
+.powered-by {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    font-size: 12px;
+    color: #777;
 }

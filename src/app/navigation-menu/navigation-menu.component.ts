@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-menu',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navigation-menu.component.html',
   styleUrl: './navigation-menu.component.scss'
 })
@@ -17,6 +17,7 @@ export class NavigationMenuComponent implements OnInit {
   inspirationImage: string = "assets/inspiration.png";
   youtubeImage: string = "assets/youtube.png";
   emailImage: string = "assets/email.png";
+  isModalOpen: boolean = false;
 
   ngOnInit() {
     this.applyGlowingTextEffect();
@@ -79,8 +80,19 @@ export class NavigationMenuComponent implements OnInit {
     window.location.href = mailtoLink;
   }
 
-  openCredits(){
-    
+  openCredits() {
+    this.isModalOpen = true;
+  }
+  
+  closeCredits() {
+    this.isModalOpen = false;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Escape' && this.isModalOpen) {
+      this.closeCredits();
+    }
   }
   
 }
