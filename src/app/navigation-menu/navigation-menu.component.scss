@@ -1,6 +1,6 @@
 .background {
     background-image: url("../01.gif");
-    background-color: black;
+    background-color: white;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -28,9 +28,12 @@
 .resume-link {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
     margin-top: 1rem;
+    background-color: white;
+    border-radius: 3rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .resume-btn {
@@ -51,57 +54,8 @@
     background-color: #23272b;
 }
 
-@keyframes ripplingEffect {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 768px) {
-    #glowing-text {
-        font-size: 3.2vw;
-    }
-
-    .name-text {
-        font-size: 5vw;
-    }
-
-    // .resume-link {
-    //     flex-direction: column;
-    //     align-items: center;
-    // }
-
-    // .resume-btn {
-    //     width: 100%;
-    //     font-size: 1rem;
-    //     padding: 8px 16px;
-    // }
-}
-
-@media (max-width: 480px) {
-    #glowing-text {
-        font-size: 4.2vw;
-    }
-
-    .name-text {
-        font-size: 6vw;
-    }
-
-    .resume-btn {
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
-}
-
 .resume-btn.icon-btn {
-    width: 50px;
+    width: 50px; /* Set a default size */
     height: 50px;
     padding: 0;
     display: flex;
@@ -110,6 +64,7 @@
     border: none;
     background: none;
     box-shadow: none;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 .resume-btn.icon-btn img {
@@ -137,4 +92,71 @@
     right: 10px;
     font-size: 12px;
     color: #777;
+}
+
+
+@keyframes ripplingEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1024px) {
+    .resume-btn.icon-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #glowing-text {
+        font-size: 3.2vw;
+    }
+
+    .name-text {
+        font-size: 5vw;
+    }
+
+    // .resume-link {
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+
+    // .resume-btn {
+    //     width: 100%;
+    //     font-size: 1rem;
+    //     padding: 8px 16px;
+    // }
+
+    .resume-btn.icon-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-btn.icon-btn {
+        width: 20px;
+        height: 20px;
+    }
+
+    #glowing-text {
+        font-size: 4.2vw;
+    }
+
+    .name-text {
+        font-size: 6vw;
+    }
+
+    .resume-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
 }
