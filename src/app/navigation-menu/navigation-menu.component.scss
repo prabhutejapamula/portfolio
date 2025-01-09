@@ -141,6 +141,14 @@
     padding: 2vh 4vw;
     }
 
+    .modal-body a {
+        display: block;
+        max-width: 480px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     }
   
 /* Small Mobile Devices */
