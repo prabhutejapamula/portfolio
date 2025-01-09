@@ -10,10 +10,17 @@
     align-items: center;
     text-align: center;
     user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+#glowing-text,
+.name-text {
+    margin: 0;
 }
 
 #glowing-text {
-    font-size: 1.7vw;
+    font-size: 2.5vw;
     font-weight: bold;
     color: #ffffff;
     transition: color 0.5s ease-in-out;
@@ -21,19 +28,21 @@
 
 .name-text {
     color: white;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: bold;
+    margin-top: 0;
 }
 
 .resume-link {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1rem;
     background-color: white;
-    border-radius: 3rem;
-    padding: 1rem 1.5rem;
+    border-radius: 3rem 0rem;
+    padding: 2vh 2vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0.3vw;
+    margin-bottom: 0;
 }
 
 .resume-btn {
@@ -41,9 +50,9 @@
     overflow: hidden;
     background-color: #343a40;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     border: none;
-    padding: 10px 20px;
+    padding: 1vh 2vw;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -55,8 +64,8 @@
 }
 
 .resume-btn.icon-btn {
-    width: 50px; /* Set a default size */
-    height: 50px;
+    width: 5.2vw;
+    height: 4vw;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -74,8 +83,8 @@
 }
 
 .small-btn {
-    padding: 2px 4px;
-    font-size: 0.7rem;
+    padding: 0.4vh 0.8vw;
+    font-size: 1rem;
     border-radius: 0.25rem;
     background-color: transparent;
     border: 1px solid #ccc;
@@ -88,13 +97,12 @@
 
 .powered-by {
     position: absolute;
-    bottom: 0px;
-    right: 10px;
-    font-size: 12px;
+    right: 1vw;
+    font-size: 1rem;
     color: #777;
 }
 
-
+/* Animation */
 @keyframes ripplingEffect {
     0% {
         transform: scale(1);
@@ -107,56 +115,39 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .resume-btn.icon-btn {
-        width: 50px;
-        height: 50px;
-    }
-}
-
+/* Tablet and smaller screen sizes */
 @media (max-width: 768px) {
-    #glowing-text {
-        font-size: 3.2vw;
-    }
-
-    .name-text {
-        font-size: 5vw;
-    }
-
-    // .resume-link {
-    //     flex-direction: column;
-    //     align-items: center;
-    // }
-
-    // .resume-btn {
-    //     width: 100%;
-    //     font-size: 1rem;
-    //     padding: 8px 16px;
-    // }
-
     .resume-btn.icon-btn {
-        width: 30px;
-        height: 30px;
+        width: 11vw;
+        height: 10vw;
     }
-}
 
+    .resume-link {
+    padding: 2vh 4vw;
+    }
+  }
+  
+  /* Mobile screen sizes */
+  @media (max-width: 576px) {
+    .resume-btn.icon-btn {
+        width: 11vw;
+        height: 10vw;
+    }
+
+    .resume-link {
+    padding: 2vh 4vw;
+    }
+
+    }
+  
+/* Small Mobile Devices */
 @media (max-width: 480px) {
     .resume-btn.icon-btn {
-        width: 20px;
-        height: 20px;
+        width: 11vw;
+        height: 10vw;
     }
 
-    #glowing-text {
-        font-size: 4.2vw;
-    }
-
-    .name-text {
-        font-size: 6vw;
-    }
-
-    .resume-btn {
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 6px 12px;
+    .resume-link {
+    padding: 2vh 4vw;
     }
 }
