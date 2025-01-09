@@ -9,6 +9,14 @@ import { Router } from '@angular/router';
 })
 export class NavigationMenuComponent implements OnInit {
   colors = ['#ff00b3', '#00ffcc', '#ffcc00', '#ff0066', '#cc00ff'];
+  resumeImage: string = "assets/cv.png";
+  linkedImage: string = "assets/linkedin.png";
+  leetcodeImage: string = "assets/LeetCode.png";
+  instagramImage: string = "assets/instagram.png";
+  photographyImage: string = "assets/photographer.png";
+  inspirationImage: string = "assets/inspiration.png";
+  youtubeImage: string = "assets/youtube.png";
+  emailImage: string = "assets/email.png";
 
   ngOnInit() {
     this.applyGlowingTextEffect();
@@ -63,4 +71,12 @@ export class NavigationMenuComponent implements OnInit {
     window.open("https://www.youtube.com/@anotherhuman137/", '_blank');
   }
 
+  sendEmail() {
+    const recipient = "prabhutejapamula@yahoo.com";
+    const subject = "From Portfolio: Let's Connect!";
+    const body = "Hello Prabhu Teja Pamula,";
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  }
+  
 }

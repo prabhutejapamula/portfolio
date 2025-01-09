@@ -7,14 +7,32 @@
             <span class="name-text">I am Prabhu Teja Pamula</span>
         </h2>
     </div>
+
     <div class="resume-link mt-4 d-flex gap-3">
-        <button class="btn btn-dark resume-btn" (click)="openResume()">Resume</button>
-        <button class="btn btn-dark resume-btn" (click)="openLinkedIn()">LinkedIn</button>
-        <button class="btn btn-dark resume-btn" (click)="openLeetcode()">Leetcode</button>
-        <button class="btn btn-dark resume-btn" (click)="openInstagram()">Instagram</button>
-        <button class="btn btn-dark resume-btn" (click)="openPhotography()">Photography</button>
-        <button class="btn btn-dark resume-btn" (click)="openArtExploration()">Art exploration</button>
-        <button class="btn btn-dark resume-btn" (click)="openYoutube()">Youtube</button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openResume()">
+            <img [src]="resumeImage" alt="Resume Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openLinkedIn()">
+            <img [src]="linkedImage" alt="LinkedIn Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openLeetcode()">
+            <img [src]="leetcodeImage" alt="Leetcode Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openInstagram()">
+            <img [src]="instagramImage" alt="Instagram Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openPhotography()">
+            <img [src]="photographyImage" alt="Photography Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openArtExploration()">
+            <img [src]="inspirationImage" alt="Inspiration Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="openYoutube()">
+            <img [src]="youtubeImage" alt="Youtube Icon" class="resume-icon">
+        </button>
+        <button class="btn btn-dark resume-btn icon-btn" (click)="sendEmail()">
+            <img [src]="emailImage" alt="Email Icon" class="resume-icon">
+        </button>
     </div>
 
     <div class="animated-threads">
