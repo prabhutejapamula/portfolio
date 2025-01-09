@@ -4,11 +4,6 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     user-select: none;
     margin: 0;
     padding: 0;
@@ -23,14 +18,17 @@
     font-size: 2.5vw;
     font-weight: bold;
     color: #ffffff;
-    transition: color 0.5s ease-in-out;
 }
 
 .name-text {
     color: white;
-    font-size: 4vw;
-    font-weight: bold;
-    margin-top: 0;
+    // font-size: 4vw;
+    // font-weight: bold;
+    // margin-top: 0;
+}
+
+.description{
+    padding-left: 20px;
 }
 
 .resume-link {
@@ -157,6 +155,10 @@ img{
 
     .resume-link {
         padding: 2vh 4vw;
+    }
+
+    #glowing-text {
+        font-size: 4vw;
     }
 }
 

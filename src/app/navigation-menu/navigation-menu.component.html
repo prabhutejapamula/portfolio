@@ -1,89 +1,107 @@
-<div class="background d-flex flex-column justify-content-center align-items-center">
-    <div class="text-center">
-        <h2 id="glowing-text">
-            Welcome to my digital space!
-        </h2>
-        <h2>
-            <span class="name-text">I am Prabhu Teja Pamula</span>
-        </h2>
+<div class="background">
+    <div class="d-flex justify-content-center align-items-center pb-5">
+      <span class="text-center" id="glowing-text">
+        Welcome to my digital space!
+      </span>
     </div>
-
+    <div class="description">
+      <div>
+      <span class="name-text">Hello I am Prabhu Teja Pamula, a human from Hyderabad, India.</span>
+    </div>
+<div class="name-text">
+  <span >I love software engineering very much. It roots back to my childhood dream of doing something in the virtual world.</span>
+  <span style="display: block;"> In my journey of 28 years on this planet Earth, I have contributed projects that make life better through mobile, desktop, and web applications for 2 year.</span>
+  <span>At the moment, I am pursing Masters in Computer Sciences and upskilling myself continuously</span>
+</div>
+    </div>
+  <div class="d-flex flex-column justify-content-center align-items-center">
     <div class="resume-link d-flex flex-wrap justify-content-center position-fixed bottom-0">
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openResume()">
-            <img [src]="resumeImage" alt="Resume Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openLinkedIn()">
-            <img [src]="linkedImage" alt="LinkedIn Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openLeetcode()">
-            <img [src]="leetcodeImage" alt="Leetcode Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openInstagram()">
-            <img [src]="instagramImage" alt="Instagram Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openPhotography()">
-            <img [src]="photographyImage" alt="Photography Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openArtExploration()">
-            <img [src]="inspirationImage" alt="Inspiration Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="openYoutube()">
-            <img [src]="youtubeImage" alt="Youtube Icon" class="resume-icon">
-        </button>
-        <button class="btn btn-dark resume-btn icon-btn" (click)="sendEmail()">
-            <img [src]="emailImage" alt="Email Icon" class="resume-icon">
-        </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openResume()">
+        <img [src]="resumeImage" alt="Resume Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openLinkedIn()">
+        <img [src]="linkedImage" alt="LinkedIn Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openLeetcode()">
+        <img [src]="leetcodeImage" alt="Leetcode Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openInstagram()">
+        <img [src]="instagramImage" alt="Instagram Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openPhotography()">
+        <img [src]="photographyImage" alt="Photography Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openArtExploration()">
+        <img [src]="inspirationImage" alt="Inspiration Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="openYoutube()">
+        <img [src]="youtubeImage" alt="Youtube Icon" class="resume-icon">
+      </button>
+      <button class="btn btn-dark resume-btn icon-btn" (click)="sendEmail()">
+        <img [src]="emailImage" alt="Email Icon" class="resume-icon">
+      </button>
     </div>
-    <button class="btn btn-secondary position-fixed top-0 end-0 m-3 small-btn" (click)="openCredits()">
-        Credits
+    <button class="btn btn-secondary position-fixed top-0 end-0 m-3 small-btn d-none d-md-block" (click)="openCredits()">
+      Credits
     </button>
+  </div>
 </div>
 
 
-  <!-- Modal -->
-  <div class="modal fade" *ngIf="isModalOpen" [ngClass]="{'show': isModalOpen}" tabindex="-1" role="dialog" aria-labelledby="creditsModalCenterTitle" aria-hidden="true" [style.display]="isModalOpen ? 'block' : 'none'">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content bg-dark text-white pb-2">
-        <div class="modal-header">
-          <h5 class="modal-title" id="creditsModalLongTitle">Credits</h5>
-          <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="closeCredits()"></button>
+<!-- Modal -->
+<div class="modal fade" *ngIf="isModalOpen" [ngClass]="{'show': isModalOpen}" tabindex="-1" role="dialog"
+  aria-labelledby="creditsModalCenterTitle" aria-hidden="true" [style.display]="isModalOpen ? 'block' : 'none'">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark text-white pb-2">
+      <div class="modal-header">
+        <h5 class="modal-title" id="creditsModalLongTitle">Credits</h5>
+        <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="closeCredits()"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <a href="https://www.flaticon.com/free-icons/sparkle" target="_blank" title="sparkle icons">Sparkle fav icon
+            created by GOWI - Flaticon</a>
         </div>
-        <div class="modal-body">
-          <div>
-            <a href="https://www.flaticon.com/free-icons/sparkle"  target="_blank" title="sparkle icons">Sparkle fav icon created by GOWI - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://pin.it/51KyJutpk" target="_blank" title="curriculum vitae icons">Background gif - Pinterest</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/curriculum-vitae" target="_blank" title="curriculum vitae icons">Curriculum vitae icon created by kerismaker - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/linkedin" target="_blank" title="linkedin icons">Linkedin icon created by ZFreet - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://en.wikipedia.org/wiki/LeetCode#/media/File:LeetCode_Logo_black_with_text.svg" target="_blank" title="leetcode icons">The LeetCode icon - Wikipedia</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/instagram" target="_blank" title="instagram icons">Instagram icon created by cobynecz - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/photography" target="_blank" title="photography icons">Photography icon created by Amethyst prime - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/inspiration" target="_blank" title="inspiration icons">Inspiration icon created by photo3idea_studio - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" target="_blank" title="brands and logotypes icons">Brands and logotypes icon created by Freepik - Flaticon</a>
-          </div>
-          <div>
-            <a href="https://www.flaticon.com/free-icons/email" target="_blank" title="email icons">Email icon created by Kiranshastry - Flaticon</a>
-          </div>
-          <div class="powered-by">
-            Powered by <strong>Angular</strong> with <strong>Bootstrap</strong>
+        <div>
+          <a href="https://pin.it/51KyJutpk" target="_blank" title="curriculum vitae icons">Background gif -
+            Pinterest</a>
         </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/curriculum-vitae" target="_blank"
+            title="curriculum vitae icons">Curriculum vitae icon created by kerismaker - Flaticon</a>
+        </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/linkedin" target="_blank" title="linkedin icons">Linkedin icon
+            created by ZFreet - Flaticon</a>
+        </div>
+        <div>
+          <a href="https://en.wikipedia.org/wiki/LeetCode#/media/File:LeetCode_Logo_black_with_text.svg" target="_blank"
+            title="leetcode icons">The LeetCode icon - Wikipedia</a>
+        </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/instagram" target="_blank" title="instagram icons">Instagram icon
+            created by cobynecz - Flaticon</a>
+        </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/photography" target="_blank"
+            title="photography icons">Photography icon created by Amethyst prime - Flaticon</a>
+        </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/inspiration" target="_blank"
+            title="inspiration icons">Inspiration icon created by photo3idea_studio - Flaticon</a>
+        </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" target="_blank"
+            title="brands and logotypes icons">Brands and logotypes icon created by Freepik - Flaticon</a>
+        </div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/email" target="_blank" title="email icons">Email icon created by
+            Kiranshastry - Flaticon</a>
+        </div>
+        <div class="powered-by">
+          Powered by <strong>Angular</strong> with <strong>Bootstrap</strong>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
