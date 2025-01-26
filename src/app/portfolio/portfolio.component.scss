@@ -3,7 +3,7 @@
 .cursor {
     width: 10px;
     height: 10px;
-    background: var(--secondary);
+    background: var(--secondary); /* Ensure this variable is defined */
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -14,13 +14,14 @@
 .cursor-follower {
     width: 30px;
     height: 30px;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--secondary); /* Ensure this variable is defined */
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9998;
     transition: transform 0.3s ease;
 }
+
 
 /* Navigation */
 .navbar {
