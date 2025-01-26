@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavigationMenuComponent],
+  imports: [PortfolioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
