@@ -556,18 +556,42 @@ footer {
 
 .personal-images{
     padding-top: 5vh;
+    cursor: none;
 }
 
 
 
-  img{
-        width: 50vh;  /* Set your desired image width */
-        height: 50vh; /* Set your desired image height */
-        object-fit: cover; /* Ensures images maintain their aspect ratio and cover the given size */
-  }
+.carousel-img {
+    width: 100vh;  /* Set your desired image width */
+    height: 50vh; /* Set your desired image height */
+    object-fit: contain; /* Adjusts the image to fit within the container, keeping aspect ratio */
+    transition: transform 0.3s ease; /* For hover zoom effect */
+    animation: subtleMove 5s ease-in-out infinite;
+}
 
   .carousel-item{
         display: flex; 
         align-items: center; 
         justify-content: center;
   }
+
+
+
+
+
+  @keyframes subtleMove {
+    0% {
+        transform: scale(1); /* Initial scale */
+      }
+      50% {
+        transform: scale(1.05); /* Zoom in slightly */
+      }
+      100% {
+        transform: scale(1); /* Return to original scale */
+      }
+  }
+  
+  /* Optional hover animation for image */
+//   img:hover {
+//     transform: scale(1.05); /* Slight zoom on hover */
+//   }
