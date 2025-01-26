@@ -19,9 +19,32 @@
             <h1 class="glitch" data-text="Software Engineer">Prabhu Teja Pamula</h1>
             <div class="typing-text"></div>
 
-            <div class="scroll-indicator">
+
+           <div class="personal-images d-flex justify-content-center align-items-center">
+            <c-carousel [animate]="true" transition="crossfade" [touch]="true">
+                <c-carousel-inner>
+                  <c-carousel-item class="carousel-item" *ngFor="let slide of slides">
+                    <img
+                      [src]="slide.src"
+                      alt="{{slide.title}}"
+                      class="d-block w-10"
+                      loading="lazy"
+                    />
+                    <c-carousel-caption class="d-none d-md-block">
+                        <h3>{{slide.title}}</h3>
+                        <p>{{slide.subtitle}}</p>
+                      </c-carousel-caption>
+                  </c-carousel-item>
+                </c-carousel-inner>
+                <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+                <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+              </c-carousel>
+           </div>
+              
+
+            <div class="scroll-indicator"  [class.hide]="isScrollingDown || !isInHomeSection">
                 <div class="mouse"></div>
-                <p>Scroll to explore</p>
+                <!-- <p>Scroll to explore</p> -->
             </div>
         </div>
     </section>
@@ -134,5 +157,5 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 All rights reserved</p>
+        <p>&copy; 2025 All rights reserved</p>
     </footer>

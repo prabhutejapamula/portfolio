@@ -118,6 +118,30 @@
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    opacity: 1;  /* Initially visible */
+    visibility: visible; /* Ensure it's initially visible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.scroll-indicator.hide {
+    opacity: 0;
+    visibility: hidden; /* Hide indicator when scrolling down */
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 95%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    opacity: 1;  /* Initially visible */
+    visibility: visible; /* Ensure it's initially visible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.scroll-indicator.hide {
+    opacity: 0;
+    visibility: hidden; /* Hide indicator when scrolling down */
 }
 
 .mouse {
@@ -141,6 +165,28 @@
     border-radius: 2px;
     animation: scroll 2s infinite;
 }
+
+/* Scroll bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scroll indicator animation */
+@keyframes scroll {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
 
 // /* Particles */
 // .particles {
@@ -500,8 +546,28 @@ footer {
         font-size: 2.5rem;
     }
 
-    .nav-links {
-        display: none;
+    .scroll-indicator{
+        left:90%;
     }
+
+
 }
 
+
+.personal-images{
+    padding-top: 5vh;
+}
+
+
+
+  img{
+        width: 50vh;  /* Set your desired image width */
+        height: 50vh; /* Set your desired image height */
+        object-fit: cover; /* Ensures images maintain their aspect ratio and cover the given size */
+  }
+
+  .carousel-item{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+  }

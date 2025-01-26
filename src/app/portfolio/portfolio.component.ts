@@ -1,11 +1,41 @@
-import { Component, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
-
+import { Component, AfterViewInit, Renderer2, ElementRef, OnInit, HostListener  } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import {
+  CarouselCaptionComponent,
+  CarouselComponent,
+  CarouselControlComponent,
+  CarouselInnerComponent,
+  CarouselItemComponent,
+  ThemeDirective
+} from '@coreui/angular';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
+  imports: [ThemeDirective, CarouselComponent, CarouselInnerComponent, NgFor, CarouselItemComponent, CarouselCaptionComponent, CarouselControlComponent, RouterLink]
 })
-export class PortfolioComponent implements AfterViewInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
+
+  slides: any[] = new Array(3).fill({ id: -1, src: '', title: '', subtitle: '' });
+  lastScrollTop = 0;
+  isScrollingDown = false;
+  isInHomeSection = false;
+  observer: IntersectionObserver = {} as IntersectionObserver; // Initialize here
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > this.lastScrollTop) {
+      this.isScrollingDown = true;
+    } else {
+      this.isScrollingDown = false;
+    }
+
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling
+  }
+  
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
@@ -24,7 +54,7 @@ export class PortfolioComponent implements AfterViewInit {
           this.renderer.setStyle(follower, 'left', `${e.clientX}px`);
           this.renderer.setStyle(follower, 'top', `${e.clientY}px`);
         }
-      }, 100);
+      }, 100); 
     });
 
     // Scroll animations
@@ -113,4 +143,48 @@ export class PortfolioComponent implements AfterViewInit {
     setInterval(createParticle, 1);
     
   }
-}
+
+  ngOnInit(): void {
+    this.observeHomeSection();
+    this.slides[0] = {
+      id: 0,
+      src: './assets/cv.png',
+      title: 'First slide',
+      subtitle: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+    };
+    this.slides[1] = {
+      id: 1,
+      src: './assets/email.png',
+      title: 'Second slide',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    };
+    this.slides[2] = {
+      id: 2,
+      src: './assets/LeetCode.png',
+      title: 'Third slide',
+      subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+    };
+  }
+
+
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
+  private observeHomeSection() {
+    const homeSection = document.querySelector('#home');
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        // Check if the section is in the viewport
+        this.isInHomeSection = entry.isIntersecting;
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% of the section is in the viewport
+    if (homeSection) {
+      this.observer.observe(homeSection);
+    }
+  }
+  }
+  
+  
